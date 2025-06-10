@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Estilo general de la aplicación */
+.minecraft-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'VT323', monospace;
+  color: white;
+  background-color: #1D1D1D;
+  min-height: 100vh;
+}
+
+/* Título estilo Minecraft */
+.minecraft-title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2.5em;
+  text-shadow: 2px 2px #3F3F3F;
+  margin-bottom: 30px;
+  border: 4px solid #404040;
+  padding: 10px;
+  background-color: #2D2D2D;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+/* Contenedor del formulario */
+.input-container {
+  background-color: #C6C6C6;
+  border: 3px solid #404040;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Inputs estilo Minecraft */
+.minecraft-input {
+  padding: 8px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  background-color: #8B8B8B;
+  border: 3px solid #404040;
+  color: white;
+  min-width: 150px;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.minecraft-input:focus {
+  outline: none;
+  border-color: #FFF;
+}
+
+/* Botones estilo Minecraft */
+.minecraft-button {
+  padding: 6px 12px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  background-color: #7F7F7F;
+  border: 3px solid #404040;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.minecraft-button:hover {
+  background-color: #9F9F9F;
+}
+
+.minecraft-button:active {
+  box-shadow: inset 2px 2px #0006, inset -2px -4px #FFF7;
+}
+
+.minecraft-button.small {
+  padding: 4px 8px;
+  font-size: 1em;
+}
+
+.minecraft-button.delete {
+  background-color: #8B0000;
+}
+
+.minecraft-button.cancel {
+  background-color: #8B0000;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  background-color: #C6C6C6;
+  border: 3px solid #404040;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+/* Slots de items */
+.item-slot {
+  background-color: #8B8B8B;
+  border: 3px solid #404040;
+  padding: 10px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.item-name {
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 1px 1px #000;
+  word-break: break-word;
+  text-align: center;
+}
+
+.item-quantity {
+  font-size: 1em;
+  color: #FFD700;
+  text-shadow: 1px 1px #000;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* Formulario de edición */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+  background-color: #8B0000;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: 3px solid #404040;
+  text-align: center;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+}
+
+.no-items {
+  text-align: center;
+  color: #FFFF00;
+  font-size: 1.4em;
+  grid-column: 1 / -1;
+  padding: 20px;
+  text-shadow: 1px 1px #000;
+} 
