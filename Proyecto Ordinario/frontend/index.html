@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Armas - RDR2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Catálogo de Armas</h1>
+            <p class="subtitle">Red Dead Redemption 2</p>
+            <button id="add-weapon-btn" class="action-btn">Agregar Nueva Arma</button>
+        </header>
+
+        <div class="weapon-filters">
+            <button class="filter-btn active" data-type="all">Todas</button>
+            <button class="filter-btn" data-type="revólver">Revólveres</button>
+            <button class="filter-btn" data-type="pistola">Pistolas</button>
+            <button class="filter-btn" data-type="rifle">Rifles</button>
+            <button class="filter-btn" data-type="escopeta">Escopetas</button>
+            <button class="filter-btn" data-type="melee">Cuerpo a Cuerpo</button>
+            <button class="filter-btn" data-type="especial">Especiales</button>
+        </div>
+
+        <div class="weapons-grid" id="weapons-container">
+            <!-- Las armas se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <div class="weapon-modal" id="weapon-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="weapon-details">
+                <h2 id="modal-weapon-name"></h2>
+                <div class="weapon-stats">
+                    <div class="stat">
+                        <span class="stat-label">Tipo:</span>
+                        <span id="modal-weapon-type"></span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Cantidad:</span>
+                        <span id="modal-weapon-quantity"></span>
+                    </div>
+                </div>
+                <div class="weapon-actions">
+                    <button id="edit-weapon-btn" class="action-btn">Editar</button>
+                    <button id="delete-weapon-btn" class="action-btn delete">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weapon-modal" id="edit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="weapon-form">
+                <h2 id="form-title">Agregar Nueva Arma</h2>
+                <form id="weapon-form">
+                    <div class="form-group">
+                        <label for="weapon-name">Nombre:</label>
+                        <input type="text" id="weapon-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weapon-type">Tipo:</label>
+                        <select id="weapon-type" required>
+                            <option value="revólver">Revólver</option>
+                            <option value="pistola">Pistola</option>
+                            <option value="rifle">Rifle</option>
+                            <option value="escopeta">Escopeta</option>
+                            <option value="melee">Cuerpo a Cuerpo</option>
+                            <option value="especial">Especial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="weapon-quantity">Cantidad:</label>
+                        <input type="number" id="weapon-quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="action-btn">Guardar</button>
+                        <button type="button" class="action-btn cancel">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
